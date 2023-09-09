@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSetRecoilState } from 'recoil';
 import { todoListState } from './store';
 
-let id = 0;
+let id = 1;
 function getId() {
     return id++;
 }
@@ -21,12 +21,11 @@ const TodoItemCreator = () => {
             {
                 id: getId(),
                 text: inputValue,
-                isComplete: true,
+                isComplete: false,
             },
         ]);
         setInputValue('');
     }
-
 
     return (
         <div>
