@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './App';
-import Todo from './Todo';
+// import Todo from './Todo';
+import Router from './Router';
 import reportWebVitals from './reportWebVitals';
+// import { RouterProvider } from 'react-router-dom'
 import {
   RecoilRoot
 } from 'recoil'
@@ -12,7 +14,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <RecoilRoot>
-      <Todo />
+      {/* <RouterProvider router={Router}/> */}
+      <Router />
     </RecoilRoot>
   </React.StrictMode>
 );

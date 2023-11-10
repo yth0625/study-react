@@ -28,7 +28,7 @@ const TodoItemCreator = () => {
     }
 
     return (
-        <div>
+        <div style={{ margin: 10, display: 'flex', flexDirection: 'row', width: 230, justifyContent: 'space-between' }}>
             <input type="text" value={inputValue} onChange={onChange} />
             <button onClick={addItem}>Add Item</button>
         </div>

@@ -1,5 +1,6 @@
 import { useRecoilState } from 'recoil';
 import { todoListFilterState } from './store';
+import './TodoFilters.css';
 
 const TodoFilters = () => {
     const [filter, setFilter] = useRecoilState(todoListFilterState);
@@ -8,14 +9,14 @@ const TodoFilters = () => {
         setFilter(target.value)
     }
     return (
-        <>
+        <div className='TodoFilters'>
             Filters:
-            <select value={filter} onChange={updateFilter}>
+            <select className='TodoFiltersSelect' value={filter} onChange={updateFilter}>
                 <option value="Show All">All</option>
                 <option value="Show Completed">Completed</option>
                 <option value="Show Uncompleted">Uncompleted</option>
             </select>
-        </>
+        </div>
     )
 }
 

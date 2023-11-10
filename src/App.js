@@ -1,11 +1,15 @@
 import './App.css';
 import { useState, useEffect, useCallback, useMemo } from 'react'
+import { useLocation } from 'react-router-dom'
 import Input from './Input';
 import Button from './Button';
 
 function App() {
   const [count, setCount] = useState(0); 
   const [value, setValue] = useState(0); 
+  const location = useLocation;
+  const state = location.state;
+  console.log('## state', state);
   // const sum = () => {
   //   console.log('### call sum', count, value);
   //   return Number(count) + Number(value)
@@ -49,6 +53,7 @@ function App() {
 
   return (
     <div className="App">
+      test: {state}
       count: {count}
       <div>
         sum: {sum}

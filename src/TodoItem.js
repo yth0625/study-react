@@ -87,7 +87,7 @@ const TodoItem = ({item}) => {
     }
 
     return (
-        <div>
+        <div style={{ margin : 10}}>
             {item.id}.
             <input type="text" value={item.text} onChange={(event) => editField('text', event)}/>
             <input
